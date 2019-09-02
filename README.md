@@ -2,8 +2,9 @@
 Ansible vars plugin, to get inventory configuration variables from Hashicorp Consul KV store.
 
 
-Consul KV store should contain tree structure, starting in 'inventory-json' folder, for example:
+## Usage
 
+Consul KV store should contain tree structure, starting in 'inventory-json' folder, for example:
 
 /inventory-json/common/foo:bar - configuration level common to all inventories and projects.
 
