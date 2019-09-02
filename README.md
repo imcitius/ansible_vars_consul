@@ -21,5 +21,28 @@ The script will merge all parameters in abovementioned order, so mode specific c
 Only configration parameter needed - Consul URL, set in CONSUL_KV_URL parameter inside of VarsModule class.
 
 
+Inventory example:
+```
+[all:vars]
+# this is project name for importing project-level variables
+project=cool_project
+
+[backend]
+192.168.1.215 hostname=back-05
+192.168.1.216 hostname=back-06
+
+[service]
+192.168.1.217 hostname=service-06
+192.168.1.218 hostname=service-07
+
+[cron]
+192.168.1.39 hostname=cron-01
+192.168.1.40 hostname=cron-02
+```
+Group names backend/service/cron is used to import group-level variables.
+
 
 PR's are welcome.
+
+
+
